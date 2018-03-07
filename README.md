@@ -43,6 +43,9 @@ Custom external plugins can easily be created using the plugin template.
 
 ### Basic Usage
 
+```html
+<script type="application/javascript" src="jtimer.js"></script>
+```
 ```js
 var timer = new JTimer;
 //  your task here

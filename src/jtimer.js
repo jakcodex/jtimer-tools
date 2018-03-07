@@ -256,6 +256,7 @@ class JTimerAggregate {
     calculate() {
 
         //  prepare for calculations
+        if ( this.samples.length === 0 ) return;
         this.samples.sort(function(a, b) {
             return (a-b);
         });
@@ -264,7 +265,6 @@ class JTimerAggregate {
 
         //  calculate the new average
         this.average = 0;
-        if ( this.samples.length === 0 ) return;
         for ( var i = 0; i < this.samples.length; i++ ) {
 
             this.average = this.average + this.samples[i];
