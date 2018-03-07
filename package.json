@@ -1,0 +1,11 @@
+{
+  "name": "JTimer Tools",
+  "version": "0.1.0",
+  "description": "A simple tool for timing your code.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakcodex/jtimer-tools"
+  },
+  "bugs": {"url": "https://github.com/jakcodex/jtimer-tools/issues"},
+  "license": "BSD-3-Clause"
+}
