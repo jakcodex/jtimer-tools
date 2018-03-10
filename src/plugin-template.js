@@ -1,13 +1,13 @@
 //
 //  This is a template plugin for JTimer.
-//  You would insert your plugin code to the CustomTimerPlugin.calculate() method. It will be executed every time a new sample is recorded.
+//  You would insert your plugin code to the CustomTimerPlugin.run() method. It will be executed every time a new sample is recorded.
 //  This is conveniently located at the top of the file! Line 10 :)
 //  Check out JTimerAggregate in jtimer.js to see a simple plugin that calculates statistics on samples
 //
 class CustomTimerPlugin {
 
     //  calculate the sample average
-    calculate() {
+    run() {
 
         //  your code to process the samples
         //  this.samples contains all recorded values

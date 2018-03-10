@@ -35,11 +35,11 @@ Custom external plugins can easily be created using the plugin template.
 + error
 
 ### Configuration Options
-+ name                  Custom name for the task [default=JTimerDefault]
-+ autoStart             Start timer on creation [default=true]
-+ verbose               Enable verbose logging [default=false]
-+ startCallback         Callback to execute upon starting the timer [default=undefined]
-+ stopCallback          Callback to execute upon stopping the timer [default=undefined]
++ name - Custom name for the task [default=JTimerDefault]
++ autoStart - Start timer on creation [default=true]
++ verbose - Enable verbose logging [default=false]
++ startCallback - Callback to execute upon starting the timer [default=undefined]
++ stopCallback - Callback to execute upon stopping the timer [default=undefined]
 
 ### Basic Usage
 
@@ -92,7 +92,8 @@ timer.mytimer.stop(function(self) {
 
 ### Methods
 + `JTimerAggregate(timer, options)`
-+ `JTimerAggregate.calculate()`
++ `JTimerAggregate.run()`
++ `JTimerAggregate.callback(timer)`
 
 ### Properties
 + `JTimerAggregate.apdex`
@@ -110,9 +111,9 @@ timer.mytimer.stop(function(self) {
 + `JTimerAggregate.samples`
 
 ### Configuration Options
-+ apdex                 Value to considered sample satisfied [default=disabled]
-+ negative              Apdex will report dissatisfied scored [default=disabled]
-+ precision             Rounding precision for calculated statistics [default=0]
++ apdex - Value to considered sample satisfied [default=disabled]
++ negative - Apdex will report dissatisfied scored [default=disabled]
++ precision - Rounding precision for calculated statistics [default=0]
 
 ### Aggregation Usage
 
@@ -153,11 +154,15 @@ aggregate.range
 
 Custom plugins are easy to create. A method named callback must be available and it should take the timer object as its argument. Callbacks are executed in their order in the plugin list.
 
-See [src/plugin-example.js](src/plugin-example.js) for more information.
+See [src/plugin-example.js](src/plugin-template.js) for more information.
 
-External plugin method
+#### External plugin method
 ```js
 var plugin = new CustomTimerPlugin;
 var timer = new JTimer({plugins: [plugin]});
 timer.stop();
 ```
+
+#### Internal plugin method
+
+Internal plugins need to be built into the JTimer constructor.
